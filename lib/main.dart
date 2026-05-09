@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'model/tarefa.dart';
 
 import 'mock/tarefas_mock.dart';
@@ -80,10 +81,8 @@ class _AgendaAppState extends State<AgendaApp> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}",
-              ),
+              padding: const EdgeInsets.all(10.0),
+              child: Text(DateFormat('dd/MM/yyyy').format(DateTime.now())),
             ),
           ],
         ),
